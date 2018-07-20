@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container">
+	<!--影院热播剧-->
+  <view class="slide">
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <swiper-item wx:for="{{ boards[0].movies }}" wx:key="id">
+        <image src="{{ item.images.large }}" mode="aspectFill"/>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!--wxml-->
+  <view class="movies_category">
+  	<!-- 电影分类-->
+  	<view class="movie" wx:for="{{boards}}" wx:key="id">
+      <navigator url="../movieList/movieList?type={{item.key}}&title={{item.title}}" hover-class="none" navigate>
+    		<view class="movie_title">
+          <view>{{item.title}}</view>
+    			<view>></view>
+    		</view>
+      </navigator>
+			<scroll-view scroll-x="true" class="content">
+				<view class="wrapper">
+					<navigator  url="../detail/detail?id={{item.id}}&title={{item.title}}" navigate wx:for="{{item.movies}}" wx:key="id" class="img_div">
+						<image src="{{item.images.small}}" mode="aspectFill" />
+						<text class="movie_name"> {{item.original_title}} </text>		
+					</navigator>
+				</view>
+			</scroll-view>	
+  	</view>
+  </view>
+</view>

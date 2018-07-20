@@ -1,0 +1,8 @@
+@import "../common/common.wxss";
+.seachInput{
+	text-align:center;
+	background:#eee;
+	padding:3px 0;
+	border-radius:10px;
+	margin-bottom:15px;
+}

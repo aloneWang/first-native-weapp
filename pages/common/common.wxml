@@ -1,0 +1,21 @@
+<template name="movie-list">
+	<view class="container">
+		<view wx:for="{{movies}}" wx:key="key" class="movie_wrapper">
+			<navigator class="left_box" url="../detail/detail?id={{item.id}}&title={{item.title}}" navigate>			
+				<view class="movie_poster">
+					<image src="{{ item.images.small }}" mode="aspectFill"/>
+				</view>
+				<view class="movie_info">
+					<view class="ellipsis">片名：{{item.title}}</view>
+					<view class="ellipsis">类型：{{item.genres}}</view>
+					<view class="ellipsis">导演：{{item.directors[0].name}}</view>
+				</view>
+			</navigator>	
+			<view class="right_box">
+				<view class="movie_point online" wx:if="{{item.rating.average > 0}}">{{ item.rating.average }}</view>
+				<view class="movie_point not-online" wx:else>暂无评分</view>
+			</view>
+		</view>
+		<text wx:if="{{!hasMore}}" class="bottomtitle"> {{ bottomtitle }} </text>
+	</view>
+</template>

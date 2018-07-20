@@ -1,0 +1,5 @@
+<!-- 电影类型的列表页 -->
+<import src="../common/common.wxml"/>
+<view class="container">
+	<template is="movie-list" data="{{movies,hasMore,bottomtitle}}"></template>
+</view>

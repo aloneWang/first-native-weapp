@@ -1,0 +1,9 @@
+/**app.wxss**/
+image{
+	width:100%
+}
+.ellipsis{
+	overflow: hidden ;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

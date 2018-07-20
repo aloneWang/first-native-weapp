@@ -1,0 +1,42 @@
+/**index.wxss**/
+.slide swiper {
+  height: 480rpx;
+}
+
+.slide swiper image {
+  height: 100%;
+  width: 100%;
+}
+.movies_category .movie_title{
+	padding: 0 20rpx ;
+	box-sizing: border-box;
+	background: #f5f5f5;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height:60rpx;
+	font-size:30rpx;
+	margin:15rpx 0;
+}
+.movies_category .movie .content .wrapper{
+	display: flex;
+	flex-wrap:nowrap;
+}
+.movies_category .movie .content .wrapper .img_div{
+	wdith:180rpx;
+	padding:10rpx;
+}
+.movies_category .movie .content .wrapper .img_div image{
+	width:180rpx;
+	height:250rpx;
+}
+.movies_category .movie .content .wrapper .img_div .movie_name{
+	width:180rpx;
+	margin: auto;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: center;
+}
+

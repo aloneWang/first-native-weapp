@@ -1,0 +1,7 @@
+视图方面：
+ 在scroll-view 组件上用flex属性无效
+ image组件中mode="aspectFill"，保持1纵横比，只对短的一边能完全显示出来。另一边会有可能会发生截取
+
+js
+	不能显式的data对象的属性值
+		通过this.	setDate(object)  object=>data指针

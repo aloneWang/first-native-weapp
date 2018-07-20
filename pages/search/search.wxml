@@ -1,0 +1,5 @@
+<import src="../common/common" />	
+<view class="container search-list">
+	<input  placeholder="请输入电影，导演或演员" bindchange="searchMore" focus="{{focus}}" class="seachInput" />
+	<template is="movie-list" data="{{movies,hasMore,bottomtitle}}"></template>
+</view>

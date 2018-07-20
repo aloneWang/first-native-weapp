@@ -1,0 +1,46 @@
+<!-- 详情页面-->
+<view class="container">
+	<image  mode="aspectFill" src="{{movie.images.large}}" class="bgimg" />
+	<block wx:if="{{ movie.title }}">
+		<view class="content">
+			<view class="movie_poster"> 
+				<image src="{{movie.images.large}}" mode="aspectFill"/>
+			</view>
+			<view class="movie_info">
+				<view class="casts_name">
+					<view>
+						<text class="title">片名</text>	
+						<text class="value">{{ movie.title }} </text>
+					</view>
+					<view>
+						<text class="title">导演</text>
+						<view class="value">
+							<text wx:for="{{movie.directors}}" wx:key="key" >{{item.name}} </text>
+						</view>		
+					</view>
+					<view class="tags">
+						<text class="title">标签</text>
+						 <view class="value">
+							<text wx:for="{{movie.genres}}" wx:key="key">{{ item }} </text>
+						</view>
+					</view>
+					<view>
+						<text class="title">评分</text>  
+						<text wx:if="{{ movie.rating.average>0}}" class="value">{{ movie.rating.average}}</text>
+						<text wx:else class="value">暂无评分</text>
+					</view>
+					<view>
+						<text class="title">主要演员</text>
+						<view class="value">
+							<text wx:for="{{movie.casts}}" wx:key="key" class="value">{{ item.name }} </text>
+						</view>		
+					</view>	
+				</view>				
+			</view>
+			<view class="summary">
+				<view class="title">摘要 :</view>
+				<view>{{movie.summary}}</view>
+			</view>
+		</view>
+	</block>
+</view>
